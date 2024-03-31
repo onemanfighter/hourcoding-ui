@@ -15,7 +15,7 @@ describe('Login component tests', () => {
 
   it('Renders correctly initial document', async () => {
     /* first we visit /login and test if the string in the element with class "login-label"  has"Please Log In" is there */
-    render(<Button />);
+    render(<Button variant="contained" label="Click me" size="small" />);
     const loginLabel = screen.getByText('Click me');
 
     expect(screen).toMatchSnapshot();
@@ -23,7 +23,9 @@ describe('Login component tests', () => {
   });
 
   it('Snapshot test', () => {
-    const tree = renderer.create(<Button />).toJSON();
+    const tree = renderer
+      .create(<Button variant="contained" label="Click me" size="small" />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

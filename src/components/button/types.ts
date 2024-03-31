@@ -1,10 +1,24 @@
 type ButtonProps = {
-  variant: 'primary' | 'secondary';
-  label: string;
+  isDisabled?: boolean;
   size: 'small' | 'medium' | 'large';
-  backgroundColor: string;
-  onClick: () => void;
+  clickHandler?: () => void;
+} & (ButtonWithText | ButtonWithIcon | ButtonWithIconAndText);
+
+type ButtonWithText = {
+  variant: 'contained' | 'outlined' | 'text';
+  label: string;
+};
+
+type ButtonWithIcon = {
+  variant: 'icon' | 'circle';
+  icon: string;
+};
+
+type ButtonWithIconAndText = {
+  variant: 'icon-and-text';
+  icon: string;
+  label: string;
+  iconPosition: 'left' | 'right';
 };
 
 export type { ButtonProps };
-// Path: src/components/button/Button.tsx
