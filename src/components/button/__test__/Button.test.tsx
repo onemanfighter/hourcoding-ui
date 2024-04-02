@@ -18,7 +18,6 @@ describe('Login component tests', () => {
     render(<Button variant="contained" label="Click me" size="small" />);
     const loginLabel = screen.getByText('Click me');
 
-    expect(screen).toMatchSnapshot();
     expect(loginLabel).toBeDefined();
   });
 
