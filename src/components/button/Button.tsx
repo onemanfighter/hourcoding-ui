@@ -12,21 +12,7 @@ const Button = ({ size = 'medium', isDisabled = false, clickHandler, ...props }:
   };
 
   return (
-    <button
-      onClick={onClickHandler}
-      className={`${sizeCss} ${variantCss}`}
-      style={{
-        cursor: isDisabled ? 'not-allowed' : 'pointer',
-        opacity: isDisabled ? 0.5 : 1,
-        fontSize: size === 'small' ? '0.75rem' : size === 'medium' ? '1rem' : '1.25rem',
-        height: size === 'small' ? '2rem' : size === 'medium' ? '2.5rem' : '3rem',
-        width: size === 'small' ? '6rem' : size === 'medium' ? '8rem' : '10rem',
-        backgroundColor: props.variant === 'contained' ? 'green' : 'white',
-        color: props.variant === 'contained' ? 'white' : 'green',
-        border: props.variant === 'outlined' ? '1px solid green' : 'none',
-        borderRadius: props.variant === 'circle' ? '50%' : '0.25rem'
-      }}
-      disabled={isDisabled}>
+    <button onClick={onClickHandler} className="bg-black h-10" disabled={isDisabled}>
       {props.variant === 'contained' || props.variant === 'outlined' || props.variant === 'text'
         ? props.label
         : null}
