@@ -12,8 +12,16 @@ const config: StorybookConfig = {
     '@storybook/addon-themes',
     '@storybook/addon-styling-webpack',
     '@storybook/addon-storysource',
-    '@storybook/addon-controls'
+    '@storybook/addon-controls',
     //https://storybook.js.org/addons/@storybook/addon-controls/
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss')
+        }
+      }
+    }
   ],
   framework: {
     name: '@storybook/react-webpack5',
