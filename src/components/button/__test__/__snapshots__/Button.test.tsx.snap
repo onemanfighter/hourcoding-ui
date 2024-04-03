@@ -2,7 +2,7 @@
 
 exports[`Login component tests Snapshot test 1`] = `
 <button
-  className="bg-black h-10"
+  className=" outline-double bg-grey h-10 p-2 hover:bg-black hover:text-white rounded-sm hover:shadow-md transition duration-300 ease-in-out"
   disabled={false}
   onClick={[Function]}
 >
