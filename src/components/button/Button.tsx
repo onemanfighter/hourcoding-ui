@@ -2,8 +2,6 @@ import React from 'react';
 import { ButtonProps } from './types';
 
 const Button = ({ size = 'medium', isDisabled = false, clickHandler, ...props }: ButtonProps) => {
-  const variantCss = props.variant === 'contained' ? 'bg-black' : 'bg-white';
-  const sizeCss = size === 'small' ? 'px-4 py-2' : size === 'medium' ? 'px-6 py-3' : 'px-8 py-4';
   const onClickHandler = () => {
     if (isDisabled) {
       return;
