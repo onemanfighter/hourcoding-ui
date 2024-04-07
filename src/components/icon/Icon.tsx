@@ -1,20 +1,12 @@
 import React from 'react';
 import { IconProps } from './types';
-import { ICON_LARGE_SIZE, ICON_MEDIUM_SIZE, ICON_SMALL_SIZE } from './constants';
 import { iconsCommon, iconsFilled, iconsHourcoding, iconsOutlined } from './icons';
+import { getIconSize } from './utils';
 
 const Icon = ({ size, color, ...props }: IconProps) => {
   if (props.category === 'hourcoding') {
     return <img src={iconsHourcoding[props.icon]} alt="icon" />;
   }
-  const iconSize = size
-    ? size === 'small'
-      ? ICON_SMALL_SIZE
-      : size === 'medium'
-        ? ICON_MEDIUM_SIZE
-        : ICON_LARGE_SIZE
-    : ICON_MEDIUM_SIZE;
-
   const iconSvg =
     props.category === 'common'
       ? iconsCommon[props.icon]
@@ -24,6 +16,7 @@ const Icon = ({ size, color, ...props }: IconProps) => {
           : iconsOutlined[props.icon]
         : '';
   const markup = { __html: iconSvg };
+  const iconSize = getIconSize(size);
 
   const id = `icon-${props.category}-${props.icon}`;
   return (
@@ -32,6 +25,7 @@ const Icon = ({ size, color, ...props }: IconProps) => {
       style={{
         width: iconSize,
         height: iconSize,
+        // [TODO]: Add theming support for color.
         color: color === 'primary' ? 'blue' : color === 'secondary' ? 'red' : 'black'
       }}
       dangerouslySetInnerHTML={markup}
