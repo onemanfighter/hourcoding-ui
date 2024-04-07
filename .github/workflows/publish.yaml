@@ -18,6 +18,11 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm run test-no-watch
+      - name: Publish to Chromatic
+        run: npm run chromatic
+        with:
+          chromatic-token: ${{ secrets.CHROMATIC_TOKEN }}
+        run: echo "Chromatic published".
       - uses: JS-DevTools/npm-publish@v3
         with:
           access: 'public'

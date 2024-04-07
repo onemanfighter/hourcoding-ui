@@ -12,12 +12,13 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_9a3f083eb2ca9e1",
+    "chromatic": "npx chromatic --project-token=chromatic-token",
     "publish": "npm publish --access public",
     "super-minor": "npm version patch",
     "minor": "npm version minor",
     "major": "npm version major"
   },
+  "homepage": "https://hourcoding-ui.netlify.app/",
   "publishConfig": {
     "access": "public"
   },
