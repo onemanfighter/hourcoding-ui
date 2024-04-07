@@ -2,7 +2,7 @@ name: Hourcoding UI publish job
 
 on:
   push:
-    branches: main
+    branches: development
 
 jobs:
   publish:
