@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Icon component Common Category Snapshot tests Add icon with default props 1`] = `
+exports[`Icon component Common Category Add icon with default props 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -10,7 +10,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with default pro
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "black",
@@ -21,7 +21,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with default pro
 />
 `;
 
-exports[`Icon component Common Category Snapshot tests Add icon with large size 1`] = `
+exports[`Icon component Common Category Add icon with large size 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -31,7 +31,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with large size 
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "black",
@@ -42,7 +42,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with large size 
 />
 `;
 
-exports[`Icon component Common Category Snapshot tests Add icon with medium size 1`] = `
+exports[`Icon component Common Category Add icon with medium size 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -52,7 +52,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with medium size
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "black",
@@ -63,7 +63,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with medium size
 />
 `;
 
-exports[`Icon component Common Category Snapshot tests Add icon with primary color 1`] = `
+exports[`Icon component Common Category Add icon with primary color 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -73,7 +73,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with primary col
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "blue",
@@ -84,7 +84,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with primary col
 />
 `;
 
-exports[`Icon component Common Category Snapshot tests Add icon with secondary color 1`] = `
+exports[`Icon component Common Category Add icon with secondary color 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -94,7 +94,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with secondary c
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "red",
@@ -105,7 +105,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with secondary c
 />
 `;
 
-exports[`Icon component Common Category Snapshot tests Add icon with small size 1`] = `
+exports[`Icon component Common Category Add icon with small size 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -115,7 +115,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with small size 
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "black",
@@ -126,7 +126,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with small size 
 />
 `;
 
-exports[`Icon component Common Category Snapshot tests Add icon with tertiary color 1`] = `
+exports[`Icon component Common Category Add icon with tertiary color 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -136,7 +136,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with tertiary co
 ",
     }
   }
-  id="icon-common-add"
+  data-testId="icon-common-add"
   style={
     Object {
       "color": "black",
@@ -147,7 +147,7 @@ exports[`Icon component Common Category Snapshot tests Add icon with tertiary co
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with filled variant 1`] = `
+exports[`Icon component Generic Category Home icon with filled variant 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -158,7 +158,7 @@ exports[`Icon component Generic Category snapshot test Home icon with filled var
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",
@@ -169,7 +169,7 @@ exports[`Icon component Generic Category snapshot test Home icon with filled var
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with large size 1`] = `
+exports[`Icon component Generic Category Home icon with large size 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -179,7 +179,7 @@ exports[`Icon component Generic Category snapshot test Home icon with large size
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",
@@ -190,7 +190,7 @@ exports[`Icon component Generic Category snapshot test Home icon with large size
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with medium size 1`] = `
+exports[`Icon component Generic Category Home icon with medium size 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -200,7 +200,7 @@ exports[`Icon component Generic Category snapshot test Home icon with medium siz
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",
@@ -211,7 +211,7 @@ exports[`Icon component Generic Category snapshot test Home icon with medium siz
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with outline variant 1`] = `
+exports[`Icon component Generic Category Home icon with outline variant 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -221,7 +221,7 @@ exports[`Icon component Generic Category snapshot test Home icon with outline va
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",
@@ -232,7 +232,7 @@ exports[`Icon component Generic Category snapshot test Home icon with outline va
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with primary color 1`] = `
+exports[`Icon component Generic Category Home icon with primary color 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -242,7 +242,7 @@ exports[`Icon component Generic Category snapshot test Home icon with primary co
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "blue",
@@ -253,7 +253,7 @@ exports[`Icon component Generic Category snapshot test Home icon with primary co
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with secondary color 1`] = `
+exports[`Icon component Generic Category Home icon with secondary color 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -263,7 +263,7 @@ exports[`Icon component Generic Category snapshot test Home icon with secondary 
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "red",
@@ -274,7 +274,7 @@ exports[`Icon component Generic Category snapshot test Home icon with secondary 
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with small size 1`] = `
+exports[`Icon component Generic Category Home icon with small size 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -284,7 +284,7 @@ exports[`Icon component Generic Category snapshot test Home icon with small size
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",
@@ -295,7 +295,7 @@ exports[`Icon component Generic Category snapshot test Home icon with small size
 />
 `;
 
-exports[`Icon component Generic Category snapshot test Home icon with tertiary color 1`] = `
+exports[`Icon component Generic Category Home icon with tertiary color 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -305,7 +305,7 @@ exports[`Icon component Generic Category snapshot test Home icon with tertiary c
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",
@@ -316,7 +316,7 @@ exports[`Icon component Generic Category snapshot test Home icon with tertiary c
 />
 `;
 
-exports[`Icon component Generic Category snapshot test icon component with generic category home with default props 1`] = `
+exports[`Icon component Generic Category icon component with generic category home with default props 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
@@ -326,7 +326,7 @@ exports[`Icon component Generic Category snapshot test icon component with gener
 ",
     }
   }
-  id="icon-generic-home"
+  data-testId="icon-generic-home"
   style={
     Object {
       "color": "black",

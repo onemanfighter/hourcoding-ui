@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils should return the 24 for small size 1`] = `24`;
+
+exports[`Utils should return the 32 for medium size 1`] = `32`;
+
+exports[`Utils should return the 48 for large size 1`] = `48`;
