@@ -21,7 +21,7 @@ const Icon = ({ size, color, ...props }: IconProps) => {
   const id = `icon-${props.category}-${props.icon}`;
   return (
     <div
-      id={id}
+      data-testId={id}
       style={{
         width: iconSize,
         height: iconSize,

@@ -1,134 +1,207 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+
 import renderer from 'react-test-renderer';
-
-import Icon from '../Icon';
 import { CommonIcon, GenericIcon } from '../types';
-
-const genericIcon = GenericIcon.HOME;
-const commonIcon = CommonIcon.ADD;
+import Icon from '../Icon';
 
 describe('Icon component', () => {
+  const genericIcon = GenericIcon.HOME;
+  const commonIcon = CommonIcon.ADD;
+
   describe('Generic Category', () => {
-    describe('logical tests', () => {
-      // TODO: Add logical tests
+    it('icon component with generic category home with default props', () => {
+      render(<Icon category="generic" icon={genericIcon} />);
+
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
     });
 
-    describe('snapshot test', () => {
-      it('icon component with generic category home with default props', () => {
-        const tree = renderer.create(<Icon category="generic" icon={genericIcon} />).toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Home icon with outline variant', () => {
+      render(<Icon category="generic" icon={genericIcon} variant="outlined" />);
 
-      it('Home icon with outline variant', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} variant="outlined" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
 
-      it('Home icon with filled variant', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} variant="filled" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} variant="outlined" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
 
-      it('Home icon with small size', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} size="small" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Home icon with filled variant', () => {
+      render(<Icon category="generic" icon={genericIcon} variant="filled" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
 
-      it('Home icon with medium size', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} size="medium" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} variant="filled" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
 
-      it('Home icon with large size', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} size="large" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Home icon with small size', () => {
+      render(<Icon category="generic" icon={genericIcon} size="small" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
 
-      it('Home icon with primary color', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} color="primary" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} size="small" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
 
-      it('Home icon with secondary color', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} color="secondary" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Home icon with medium size', () => {
+      render(<Icon category="generic" icon={genericIcon} size="medium" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
 
-      it('Home icon with tertiary color', () => {
-        const tree = renderer
-          .create(<Icon category="generic" icon={genericIcon} color="tertiary" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} size="medium" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
+
+    it('Home icon with large size', () => {
+      render(<Icon category="generic" icon={genericIcon} size="large" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} size="large" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
+
+    it('Home icon with primary color', () => {
+      render(<Icon category="generic" icon={genericIcon} color="primary" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} color="primary" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
+
+    it('Home icon with secondary color', () => {
+      render(<Icon category="generic" icon={genericIcon} color="secondary" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} color="secondary" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
+
+    it('Home icon with tertiary color', () => {
+      render(<Icon category="generic" icon={genericIcon} color="tertiary" />);
+      const icon = screen.getByTestId('icon-generic-home');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="generic" icon={genericIcon} color="tertiary" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
     });
   });
 
   describe('Common Category', () => {
-    describe('logical tests', () => {
-      // TODO: Add logical tests
+    it('Add icon with default props', () => {
+      render(<Icon category="common" icon={commonIcon} />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer.create(<Icon category="common" icon={commonIcon} />).toJSON();
+      expect(componentTree).toMatchSnapshot();
     });
 
-    describe('Snapshot tests', () => {
-      it('Add icon with default props', () => {
-        const tree = renderer.create(<Icon category="common" icon={commonIcon} />).toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Add icon with small size', () => {
+      render(<Icon category="common" icon={commonIcon} size="small" />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
 
-      it('Add icon with small size', () => {
-        const tree = renderer
-          .create(<Icon category="common" icon={commonIcon} size="small" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="common" icon={commonIcon} size="small" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
 
-      it('Add icon with medium size', () => {
-        const tree = renderer
-          .create(<Icon category="common" icon={commonIcon} size="medium" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Add icon with medium size', () => {
+      render(<Icon category="common" icon={commonIcon} size="medium" />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
 
-      it('Add icon with large size', () => {
-        const tree = renderer
-          .create(<Icon category="common" icon={commonIcon} size="large" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="common" icon={commonIcon} size="medium" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
 
-      it('Add icon with primary color', () => {
-        const tree = renderer
-          .create(<Icon category="common" icon={commonIcon} color="primary" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Add icon with large size', () => {
+      render(<Icon category="common" icon={commonIcon} size="large" />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
 
-      it('Add icon with secondary color', () => {
-        const tree = renderer
-          .create(<Icon category="common" icon={commonIcon} color="secondary" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="common" icon={commonIcon} size="large" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
 
-      it('Add icon with tertiary color', () => {
-        const tree = renderer
-          .create(<Icon category="common" icon={commonIcon} color="tertiary" />)
-          .toJSON();
-        expect(tree).toMatchSnapshot();
-      });
+    it('Add icon with primary color', () => {
+      render(<Icon category="common" icon={commonIcon} color="primary" />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="common" icon={commonIcon} color="primary" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
+
+    it('Add icon with secondary color', () => {
+      render(<Icon category="common" icon={commonIcon} color="secondary" />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="common" icon={commonIcon} color="secondary" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
+    });
+
+    it('Add icon with tertiary color', () => {
+      render(<Icon category="common" icon={commonIcon} color="tertiary" />);
+      const icon = screen.getByTestId('icon-common-add');
+      expect(icon).toBeDefined();
+
+      // Snapshot testing
+      const componentTree = renderer
+        .create(<Icon category="common" icon={commonIcon} color="tertiary" />)
+        .toJSON();
+      expect(componentTree).toMatchSnapshot();
     });
   });
 });
