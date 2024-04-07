@@ -20,4 +20,5 @@ jobs:
         run: npm run test-no-watch
       - uses: JS-DevTools/npm-publish@v3
         with:
+          access: 'public'
           token: ${{ secrets.NPM_AUTH_TOKEN }}

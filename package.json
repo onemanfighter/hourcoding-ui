@@ -12,7 +12,11 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_9a3f083eb2ca9e1"
+    "chromatic": "npx chromatic --project-token=chpt_9a3f083eb2ca9e1",
+    "publish": "npm publish --access public"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "author": "",
   "license": "MIT",
