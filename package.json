@@ -4,8 +4,9 @@
   "description": "UI library for the hourcoding apps",
   "main": "index.ts",
   "scripts": {
-    "test": "react-scripts test --silent",
-    "test-no-watch": "react-scripts test --silent --watchAll=false",
+    "test": "react-scripts test --silent --watchAll=false",
+    "test:coverage": "react-scripts test --coverage --watchAll=false --coverageThreshold=100",
+    "test:watch": "react-scripts test --silent --watchAll=true",
     "prepare": "husky",
     "lint": "eslint . --ext .ts,.tsx",
     "fix": "eslint --fix",
