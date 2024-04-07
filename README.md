@@ -16,7 +16,7 @@ UI Library for the hourcoding project, which is a collection of React web compon
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b6f0e253-0cde-444f-99ff-75a8a2a21a84/deploy-status)](https://app.netlify.com/sites/hourcoding-ui/deploys)
 
-- [Hourcoding-ui]https://hourcoding-ui.netlify.app/
+- [Hourcoding-ui](https://hourcoding-ui.netlify.app/)
 
 ## Chromatic Storybook
 
