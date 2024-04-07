@@ -24,3 +24,21 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm run test-no-watch
+
+  publish_chromatic:
+    runs-on: ubuntu-latest
+    needs: lint_test
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npm run build-storybook
+      - name: Chromatic publish
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+          storybookBuildDir: storybook-static
