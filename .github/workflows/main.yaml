@@ -35,8 +35,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
-      - run: npm install
-      - run: npm run build-storybook
+      - run: yarn install
+      - run: yarn build-storybook
       - name: Chromatic publish
         uses: chromaui/action@latest
         with:
