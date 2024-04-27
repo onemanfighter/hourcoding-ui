@@ -13,7 +13,8 @@ const Button = ({ size = 'medium', isDisabled = false, clickHandler, ...props }:
     <button
       onClick={onClickHandler}
       className=" outline-double bg-grey h-10 p-2 hover:bg-black hover:text-white rounded-sm hover:shadow-md transition duration-300 ease-in-out"
-      disabled={isDisabled}>
+      disabled={isDisabled}
+    >
       {props.variant === 'contained' || props.variant === 'outlined' || props.variant === 'text'
         ? props.label
         : null}
