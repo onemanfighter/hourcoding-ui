@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { GenericIcon, HourcodingIcon, Icon } from '../src/components';
-import { CommonIcon } from '../src/components/icon/types';
+import { GenericIcon, HourcodingIcon, Icon } from '../../src/components';
+import { CommonIcon } from '../../src/components/icon/types';
 
 const meta = {
   title: 'Example/Icon',
