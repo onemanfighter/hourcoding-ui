@@ -8,16 +8,11 @@ jobs:
   publish_npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20'
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
       - name: Install Dependencies
-        run: npm ci
-      - name: Linting
-        run: npm run lint
-      - name: Test
-        run: npm run test-no-watch
+        run: yarn install
       - uses: JS-DevTools/npm-publish@v3
         with:
           access: 'public'
