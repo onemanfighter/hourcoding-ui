@@ -1,7 +1,7 @@
 # Hourcoding UI
 
 [![Hourcoding UI Lint-Test](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/main.yaml/badge.svg)](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/main.yaml)
-[![Hourcoding UI Publish job](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/publish.yaml/badge.svg)](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/publish.yaml)
+[![Hourcoding UI Publish job](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/publish-npm.yaml/badge.svg)](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/publish-npm.yaml)
 
 UI Library for the hourcoding project, which is a collection of React web components.
 
