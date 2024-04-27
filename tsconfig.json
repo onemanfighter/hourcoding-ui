@@ -1,6 +1,9 @@
 {
   "include": ["src", "examples"],
   "exclude": ["node_modules"],
+  "paths": {
+    "@hourcoding/hourcoding-ui": ["./src/index"]
+  },
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
