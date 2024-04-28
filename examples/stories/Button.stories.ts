@@ -5,14 +5,14 @@ const meta = {
   title: 'Example/Button',
   component: Button,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
   tags: ['autodocs'],
   args: {
     variant: 'contained',
     label: 'Button',
-    size: 'small'
-  }
+    size: 'small',
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -22,6 +22,6 @@ export const Primary: Story = {
   args: {
     variant: 'contained',
     label: 'Button',
-    size: 'small'
-  }
+    size: 'small',
+  },
 };

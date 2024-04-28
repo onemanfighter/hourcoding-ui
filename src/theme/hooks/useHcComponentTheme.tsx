@@ -10,11 +10,11 @@ const useHcComponentTheme = (): HcComponentStyles => {
     Button: {
       primary: theme === Theme.LIGHT ? 'blue.500' : 'blue.300',
       secondary: theme === Theme.LIGHT ? 'grey.200' : 'grey.700',
-      tertiary: theme === Theme.LIGHT ? 'red.500' : 'red.300'
+      tertiary: theme === Theme.LIGHT ? 'red.500' : 'red.300',
     },
     Icon: {
-      main: theme === Theme.LIGHT ? 'green.500' : 'green.300'
-    }
+      main: theme === Theme.LIGHT ? 'green.500' : 'green.300',
+    },
   };
 };
 

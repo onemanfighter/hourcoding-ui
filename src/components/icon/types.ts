@@ -21,15 +21,15 @@ export type IconProps = {} & (
 );
 
 export enum HourcodingIcon {
-  HOURCODING = 'hourCoding'
+  HOURCODING = 'hourCoding',
 }
 export enum GenericIcon {
   HOME = 'home',
-  BACK = 'back'
+  BACK = 'back',
 }
 
 export enum CommonIcon {
   ADD = 'add',
   REMOVE = 'remove',
-  QR = 'qr'
+  QR = 'qr',
 }

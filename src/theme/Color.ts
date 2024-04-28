@@ -11,7 +11,7 @@ const neutral = {
   700: '#8c8c8c',
   800: '#595959',
   900: '#262626',
-  1000: '#000000'
+  1000: '#000000',
 };
 
 const green = {
@@ -24,7 +24,7 @@ const green = {
   600: '#16a34a',
   700: '#15803d',
   800: '#166534',
-  900: '#14532d'
+  900: '#14532d',
 };
 
 const red = {
@@ -37,7 +37,7 @@ const red = {
   600: '#a2191f',
   700: '#7c151c',
   800: '#501514',
-  900: '#3d0d12'
+  900: '#3d0d12',
 };
 
 const blue = {
@@ -50,7 +50,7 @@ const blue = {
   600: '#1c64f2',
   700: '#1a56db',
   800: '#1e429f',
-  900: '#233876'
+  900: '#233876',
 };
 
 const orange = {
@@ -63,7 +63,7 @@ const orange = {
   600: '#d03801',
   700: '#b43403',
   800: '#8a2c0d',
-  900: '#73230d'
+  900: '#73230d',
 };
 
 const yellow = {
@@ -76,14 +76,14 @@ const yellow = {
   600: '#9f580a',
   700: '#8e4b10',
   800: '#723b13',
-  900: '#633112'
+  900: '#633112',
 };
 
 const system = {
   info: blue[500],
   success: green[500],
   warning: yellow[500],
-  error: red[500]
+  error: red[500],
 };
 
 const flattenColors = (color: object, colorName: string) => {
@@ -106,7 +106,7 @@ export const flattenColorPalette = (theme: Theme) => {
     ...flattenColors(yellow, 'yellow'),
     ...flattenColors(system, 'systemColor'),
     primaryText: theme === Theme.LIGHT ? neutral[1000] : neutral[0],
-    secondaryText: theme === Theme.LIGHT ? neutral[800] : neutral[200]
+    secondaryText: theme === Theme.LIGHT ? neutral[800] : neutral[200],
   };
   return colors as unknown as { [key in HcColor]: string };
 };
@@ -118,5 +118,5 @@ export const Colors = {
   blue,
   orange,
   yellow,
-  system
+  system,
 };

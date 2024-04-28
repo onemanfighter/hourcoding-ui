@@ -4,7 +4,7 @@ const config: StorybookConfig = {
   stories: [
     '../src/**/*.mdx',
     '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-    '../examples/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+    '../examples/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
   addons: [
     '@storybook/addon-webpack5-compiler-swc',
@@ -22,26 +22,26 @@ const config: StorybookConfig = {
       name: '@storybook/addon-postcss',
       options: {
         postcssLoaderOptions: {
-          implementation: require('postcss')
-        }
-      }
-    }
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: {
     name: '@storybook/react-webpack5',
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
   },
   swc: () => ({
     jsc: {
       transform: {
         react: {
-          runtime: 'automatic'
-        }
-      }
-    }
-  })
+          runtime: 'automatic',
+        },
+      },
+    },
+  }),
 };
 export default config;
