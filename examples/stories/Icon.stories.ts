@@ -6,7 +6,7 @@ const meta = {
   title: 'Example/Icon',
   component: Icon,
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
@@ -14,19 +14,19 @@ const meta = {
     variant: {
       options: ['filled', 'outlined'],
       control: { type: 'inline-radio' },
-      if: { arg: 'category', eq: 'generic' }
+      if: { arg: 'category', eq: 'generic' },
     },
     icon: {
       options: [
         ...Object.values(HourcodingIcon).map((icon) => icon),
         ...Object.values(GenericIcon).map((icon) => icon),
-        ...Object.values(CommonIcon).map((icon) => icon)
+        ...Object.values(CommonIcon).map((icon) => icon),
       ],
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     size: { options: ['small', 'medium', 'large'], control: { type: 'select' } },
-    color: { options: ['primary', 'secondary', 'tertiary'], control: { type: 'select' } }
-  }
+    color: { options: ['primary', 'secondary', 'tertiary'], control: { type: 'select' } },
+  },
 } satisfies Meta<typeof Icon>;
 
 export default meta;
@@ -37,6 +37,6 @@ export const Primary: Story = {
     variant: 'filled',
     size: 'medium',
     category: 'generic',
-    icon: GenericIcon.HOME
-  }
+    icon: GenericIcon.HOME,
+  },
 };

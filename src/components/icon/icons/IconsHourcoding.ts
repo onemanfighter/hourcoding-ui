@@ -1,3 +1,3 @@
 export const iconsHourcoding = {
-  hourCoding: ``
+  hourCoding: ``,
 };

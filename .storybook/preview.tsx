@@ -8,9 +8,9 @@ const parameters = {
   controls: {
     matchers: {
       color: /(background|color)$/i,
-      date: /Date$/i
-    }
-  }
+      date: /Date$/i,
+    },
+  },
 };
 
 const decorators = [
@@ -18,12 +18,12 @@ const decorators = [
     <Provider>
       <StoryFn />
     </Provider>
-  )
+  ),
 ];
 
 const preview: Preview = {
   parameters,
-  decorators
+  decorators,
 };
 
 export default preview;

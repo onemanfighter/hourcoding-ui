@@ -26,7 +26,7 @@ export type TextVariant = {
 // Theme type
 export enum Theme {
   LIGHT = 'light',
-  DARK = 'dark'
+  DARK = 'dark',
 }
 
 // Provider types

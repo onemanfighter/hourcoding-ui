@@ -13,7 +13,7 @@ const Provider = ({ children }) => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        width: '100vw'
+        width: '100vw',
       }}
     >
       {

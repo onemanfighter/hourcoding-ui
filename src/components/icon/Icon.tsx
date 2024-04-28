@@ -26,7 +26,7 @@ const Icon = ({ size, color, ...props }: IconProps) => {
         width: iconSize,
         height: iconSize,
         // [TODO]: Add theming support for color .
-        color: color === 'primary' ? 'blue' : color === 'secondary' ? 'red' : 'black'
+        color: color === 'primary' ? 'blue' : color === 'secondary' ? 'red' : 'black',
       }}
       dangerouslySetInnerHTML={markup}
     />
