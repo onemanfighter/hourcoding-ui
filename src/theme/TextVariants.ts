@@ -14,9 +14,20 @@ const PrimaryContent = {
   LINK: 'primaryContentLink',
 } as const;
 
+const ButtonTextVariant = {
+  SMALL: 'buttonSmall',
+  DEFAULT: 'buttonDefault',
+  LARGE: 'buttonLarge',
+} as const;
+
+const ButtonVariant = {
+  TEXT: ButtonTextVariant,
+} as const;
+
 export const TEXT_VARIANTS = {
   HEADERS: Headers,
   CONTENT: PrimaryContent,
+  BUTTON: ButtonVariant,
 } as const;
 
 export const TextVariantsImp: Record<string, TextVariant> = {
@@ -60,6 +71,21 @@ export const TextVariantsImp: Record<string, TextVariant> = {
     fontWeight: '400',
     lineHeight: 1.5,
     textDecorationLine: 'underline',
+  },
+  [TEXT_VARIANTS.BUTTON.TEXT.SMALL]: {
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 1.5,
+  },
+  [TEXT_VARIANTS.BUTTON.TEXT.DEFAULT]: {
+    fontSize: 18,
+    fontWeight: '400',
+    lineHeight: 1.5,
+  },
+  [TEXT_VARIANTS.BUTTON.TEXT.LARGE]: {
+    fontSize: 22,
+    fontWeight: '400',
+    lineHeight: 1.5,
   },
   default: {
     fontSize: 16,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../../src';
+import { Button, ButtonVariant } from '../../src';
 
 const meta = {
   title: 'Example/Button',
@@ -9,7 +9,7 @@ const meta = {
   },
   tags: ['autodocs'],
   args: {
-    variant: 'contained',
+    variant: ButtonVariant.CONTAINED,
     label: 'Button',
     size: 'small',
   },
@@ -19,9 +19,12 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    variant: 'contained',
-    label: 'Button',
-    size: 'small',
+  argTypes: {
+    variant: {
+      options: Object.values(ButtonVariant),
+      control: {
+        type: 'select',
+      },
+    },
   },
 };

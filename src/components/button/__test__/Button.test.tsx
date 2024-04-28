@@ -3,28 +3,128 @@ import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
 import Button from '../Button';
+import { ButtonVariant } from '../types';
 
-describe('Login component tests', () => {
-  beforeEach(() => {
-    // write someting before each test
+describe('Button', () => {
+  beforeEach(() => {});
+
+  describe('contained', () => {
+    it('Renders correctly ', () => {
+      render(<Button label="Click me" size="small" />);
+      const buttonLabel = screen.getByText('Click me');
+
+      expect(buttonLabel).toBeDefined();
+    });
+
+    it('clicks correctly ', () => {
+      const mockCallBack = jest.fn();
+      render(
+        <Button
+          label="Click me"
+          size="default"
+          variant={ButtonVariant.CONTAINED}
+          clickHandler={mockCallBack}
+        />,
+      );
+      const buttonLabel = screen.getByText('Click me');
+
+      expect(buttonLabel).toBeDefined();
+      buttonLabel.click();
+
+      expect(mockCallBack).toHaveBeenCalledTimes(1);
+    });
+
+    it('snapshot test', () => {
+      const tree = renderer.create(<Button label="Click me" size="small" />).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 
-  afterEach(() => {
-    // write someting after each test
-  });
+  describe('outlined', () => {
+    it('Renders correctly ', () => {
+      render(<Button label="Click me" size="small" variant={ButtonVariant.OUTLINED} />);
+      const buttonLabel = screen.getByText('Click me');
 
-  it('Renders correctly initial document', async () => {
-    /* first we visit /login and test if the string in the element with class "login-label"  has"Please Log In" is there */
-    render(<Button variant="contained" label="Click me" size="small" />);
-    const loginLabel = screen.getByText('Click me');
+      expect(buttonLabel).toBeDefined();
+    });
 
-    expect(loginLabel).toBeDefined();
-  });
+    it('clicks correctly ', () => {
+      const mockCallBack = jest.fn();
+      render(
+        <Button
+          label="Click me"
+          size="small"
+          variant={ButtonVariant.OUTLINED}
+          clickHandler={mockCallBack}
+        />,
+      );
+      const buttonLabel = screen.getByText('Click me');
 
-  it('Snapshot test', () => {
-    const tree = renderer
-      .create(<Button variant="contained" label="Click me" size="small" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+      expect(buttonLabel).toBeDefined();
+      buttonLabel.click();
+
+      expect(mockCallBack).toHaveBeenCalledTimes(1);
+    });
+
+    // it('snapshot test', async () => {
+    //   const tree = renderer
+    //     .create(<Button label="Click me" size="small" variant={ButtonVariant.OUTLINED} />)
+    //     .toJSON();
+
+    //   expect(tree).toMatchSnapshot();
+    // });
+
+    describe('text', () => {
+      it('Renders correctly ', () => {
+        render(<Button label="Click me" size="small" variant={ButtonVariant.TEXT} />);
+        const buttonLabel = screen.getByText('Click me');
+
+        expect(buttonLabel).toBeDefined();
+      });
+
+      it('clicks correctly ', () => {
+        const mockCallBack = jest.fn();
+        render(
+          <Button
+            label="Click me"
+            size="small"
+            variant={ButtonVariant.OUTLINED}
+            clickHandler={mockCallBack}
+          />,
+        );
+        const buttonLabel = screen.getByText('Click me');
+
+        expect(buttonLabel).toBeDefined();
+        buttonLabel.click();
+
+        expect(mockCallBack).toHaveBeenCalledTimes(1);
+      });
+
+      // it('snapshot test', () => {
+      //   const tree = renderer
+      //     .create(<Button label="Click me" size="small" variant={ButtonVariant.TEXT} />)
+      //     .toJSON();
+
+      //   expect(tree).toMatchSnapshot();
+      // });
+    });
+
+    describe('link', () => {
+      it('Renders correctly ', () => {
+        render(<Button label="Click me" size="small" variant={ButtonVariant.LINK} />);
+        const buttonLabel = screen.getByText('Click me');
+
+        expect(buttonLabel).toBeDefined();
+      });
+
+      // it('snapshot test', () => {
+      //   const tree = renderer
+      //     .create(<Button label="Click me" size="small" variant={ButtonVariant.LINK} />)
+      //     .toJSON();
+
+      //   expect(tree).toMatchSnapshot();
+      // });
+    });
   });
 });

@@ -1,10 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login component tests Snapshot test 1`] = `
+exports[`Button contained snapshot test 1`] = `
 <button
-  className=" outline-double bg-grey h-10 p-2 hover:bg-black hover:text-white rounded-sm hover:shadow-md transition duration-300 ease-in-out"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "background": "#86efac",
+      "border": "none",
+      "borderColor": "#a4cafe",
+      "borderRadius": 4,
+      "color": undefined,
+      "fontSize": 14,
+      "fontWeight": "400",
+      "lineHeight": 1.5,
+      "padding": "4px 8px",
+    }
+  }
+  tabIndex={0}
 >
   Click me
 </button>
