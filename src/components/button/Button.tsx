@@ -1,27 +1,85 @@
 import React from 'react';
-import { ButtonProps } from './types';
+import { ButtonProps, ButtonVariant } from './types';
+import { motion } from 'framer-motion';
+import { useHcColor, useHcComponentTheme, useHcTextVariants } from '../../theme';
+import { BUTTON_BORDER_RADIUS } from './constants';
 
-const Button = ({ size = 'medium', isDisabled = false, clickHandler, ...props }: ButtonProps) => {
+const Button = ({
+  size = 'large',
+  label,
+  isDisabled = false,
+  variant = ButtonVariant.CONTAINED,
+  clickHandler,
+}: ButtonProps) => {
+  const buttonTheme = useHcComponentTheme().Button[variant];
+  const getTextVariant = useHcTextVariants();
+  const getColor = useHcColor();
+
+  const textVariant = () => {
+    if (size === 'small') {
+      return getTextVariant('buttonSmall');
+    } else if (size === 'default') {
+      return getTextVariant('buttonDefault');
+    } else if (size === 'large') {
+      return getTextVariant('buttonLarge');
+    } else {
+      return getTextVariant('buttonDefault');
+    }
+  };
+
   const onClickHandler = () => {
     if (isDisabled) {
       return;
     }
+
     if (clickHandler) clickHandler();
   };
 
   return (
-    <button
+    <motion.button
       onClick={onClickHandler}
-      className=" outline-double bg-grey h-10 p-2 hover:bg-black hover:text-white rounded-sm hover:shadow-md transition duration-300 ease-in-out"
       disabled={isDisabled}
+      animate={{
+        scale: isDisabled ? 1 : 1.1,
+        transition: {
+          duration: 0.3,
+        },
+      }}
+      whileHover={
+        isDisabled
+          ? {}
+          : {
+              scale: 1.2,
+              backgroundColor: getColor('neutral.600'),
+              transition: {
+                duration: 0.3,
+              },
+            }
+      }
+      whileTap={
+        isDisabled
+          ? {}
+          : {
+              scale: 1,
+              transition: {
+                duration: 0.1,
+              },
+            }
+      }
+      style={{
+        padding: size === 'small' ? '4px 8px' : size === 'default' ? '6px 12px' : '8px 16px',
+        border: variant === ButtonVariant.OUTLINED ? '1px solid' : 'none',
+        ...textVariant(),
+        borderRadius: BUTTON_BORDER_RADIUS,
+        borderColor: buttonTheme.borderColor ? getColor(buttonTheme.borderColor) : 'transparent',
+        color: getColor(buttonTheme.color),
+        background: buttonTheme.backgroundColor
+          ? getColor(buttonTheme.backgroundColor)
+          : 'transparent',
+      }}
     >
-      {props.variant === 'contained' || props.variant === 'outlined' || props.variant === 'text'
-        ? props.label
-        : null}
-      {props.variant === 'icon' || props.variant === 'circle' ? (
-        <img src={props.icon} alt="icon" />
-      ) : null}
-    </button>
+      {label}
+    </motion.button>
   );
 };
 

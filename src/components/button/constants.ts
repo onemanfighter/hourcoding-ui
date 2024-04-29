@@ -1,3 +1,3 @@
-const A = '';
+const BUTTON_BORDER_RADIUS = 4;
 
-export { A };
+export { BUTTON_BORDER_RADIUS };

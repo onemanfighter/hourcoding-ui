@@ -8,9 +8,22 @@ const useHcComponentTheme = (): HcComponentStyles => {
 
   return {
     Button: {
-      primary: theme === Theme.LIGHT ? 'blue.500' : 'blue.300',
-      secondary: theme === Theme.LIGHT ? 'grey.200' : 'grey.700',
-      tertiary: theme === Theme.LIGHT ? 'red.500' : 'red.300',
+      contained: {
+        backgroundColor: theme === Theme.LIGHT ? 'green.500' : 'green.300',
+        color: theme === Theme.LIGHT ? 'neutral.0' : 'neutral.200',
+        borderColor: theme === Theme.LIGHT ? 'blue.500' : 'blue.300',
+      },
+      outlined: {
+        backgroundColor: theme === Theme.LIGHT ? 'neutral.0' : 'neutral.600',
+        color: theme === Theme.LIGHT ? 'green.500' : 'green.300',
+        borderColor: theme === Theme.LIGHT ? 'green.500' : 'green.300',
+      },
+      text: {
+        color: theme === Theme.LIGHT ? 'green.500' : 'green.200',
+      },
+      link: {
+        color: theme === Theme.LIGHT ? 'blue.500' : 'blue.300',
+      },
     },
     Icon: {
       main: theme === Theme.LIGHT ? 'green.500' : 'green.300',
