@@ -22,8 +22,7 @@
     "super-minor": "yarn version --patch",
     "minor": "yarn version --minor",
     "major": "yarn version --major",
-    "build:dev": "rimraf dist && rollup -c --environment NODE_ENV:development",
-    "build:prod": "rimraf dist && rollup -c --environment NODE_ENV:production"
+    "build": "rimraf dist && rollup -c "
   },
   "homepage": "https://hourcoding-ui.netlify.app/",
   "publishConfig": {
