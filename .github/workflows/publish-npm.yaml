@@ -13,7 +13,9 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install Dependencies
         run: yarn install
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          access: 'public'
-          token: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Build 🔧
+        run: yarn build
+      - name: Publish package on NPM 📦
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
