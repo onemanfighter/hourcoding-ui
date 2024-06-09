@@ -5,7 +5,7 @@ exports[`Button contained snapshot test 1`] = `
   disabled={false}
   onClick={[Function]}
   style={
-    Object {
+    {
       "background": "#86efac",
       "border": "none",
       "borderColor": "#a4cafe",

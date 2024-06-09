@@ -1,4 +1,3 @@
-import React from 'react';
 import { ButtonProps, ButtonVariant } from './types';
 import { motion } from 'framer-motion';
 import { useHcColor, useHcComponentTheme, useHcTextVariants } from '../../theme';

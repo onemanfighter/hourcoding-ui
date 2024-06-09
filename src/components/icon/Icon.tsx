@@ -1,4 +1,3 @@
-import React from 'react';
 import { IconProps } from './types';
 import { iconsCommon, iconsFilled, iconsHourcoding, iconsOutlined } from './icons';
 import { getIconSize } from './utils';
@@ -21,7 +20,7 @@ const Icon = ({ size, color, ...props }: IconProps) => {
   const id = `icon-${props.category}-${props.icon}`;
   return (
     <div
-      data-testId={id}
+      aria-label={id}
       style={{
         width: iconSize,
         height: iconSize,
