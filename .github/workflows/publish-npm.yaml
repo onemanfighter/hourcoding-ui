@@ -2,7 +2,7 @@ name: Hourcoding UI publish job
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   publish_npm:
