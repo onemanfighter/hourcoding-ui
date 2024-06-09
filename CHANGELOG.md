@@ -1,4 +1,13 @@
-# 0.1.0 (2024-06-09)
+## [0.1.1](https://github.com/onemanfighter/hourcoding-ui/compare/v0.1.0...v0.1.1) (2024-06-09)
+
+
+### Bug Fixes
+
+* Fixed a typo in index.js ([#53](https://github.com/onemanfighter/hourcoding-ui/issues/53)) ([714fe3f](https://github.com/onemanfighter/hourcoding-ui/commit/714fe3f2d68ff3c0492e397ba394aac0d5bda37d))
+
+
+
+# [0.1.0](https://github.com/onemanfighter/hourcoding-ui/compare/d0c398d9cd158845d68dc5eb5f0f159383715f01...v0.1.0) (2024-06-09)
 
 
 ### Bug Fixes
