@@ -23,6 +23,7 @@ jobs:
         with:
           # you can also create separate token to trace action
           github-token: '${{ secrets.PA_TOKEN }}'
+          git-user-name: 'Hourcoding UI Bot'
 
       - name: create release
         # https://github.com/actions/create-release
