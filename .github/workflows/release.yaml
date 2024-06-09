@@ -7,15 +7,31 @@ permissions:
   contents: write
 
 jobs:
+  lint_test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+      - name: Install Dependencies
+        run: yarn install
+      - name: Test
+        run: yarn test:coverage
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
   release:
     runs-on: ubuntu-latest
-
+    needs: lint_test
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.PA_TOKEN }}
-
       - name: conventional changelog action
         id: changelog
         # https://github.com/TriPSs/conventional-changelog-action
