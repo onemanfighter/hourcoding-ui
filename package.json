@@ -7,32 +7,30 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "react-scripts test --silent --watchAll=false",
-    "test:coverage": "react-scripts test --coverage --watchAll=false --coverageThreshold=100",
-    "test:watch": "react-scripts test --silent --watchAll=true",
+    "prepare": "husky",
+    "sb": "storybook dev -p 6006",
+    "test": "TZ=UTC jest --config jest.config.json",
+    "test:coverage": "TZ=UTC jest --config jest.config.json --coverage ",
+    "run-pushed-files-tests": "./scripts/run-staged-tests.sh --pushed",
+    "run-staged-tests": "./scripts/run-staged-tests.sh",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check .",
     "prettier:staged": "prettier --write .",
-    "prepare": "husky",
-    "lint": "eslint . --ext .ts,.tsx",
-    "fix": "eslint --fix",
+    "lint:staged": "eslint --fix --ext .ts,.tsx $(git diff --name-only --cached --relative --diff-filter=ACMRTUXB | grep '\\.tsx\\?$')",
+    "lint:fix": "eslint --fix --ext .ts,.tsx ./src",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "sb": "storybook dev -p 6006",
+    "build": "rimraf dist && rollup -c --bundleConfigAsCjs",
     "build-storybook": "storybook build",
     "chromatic": "yarn chromatic --project-token $CHROMATIC_TOKEN",
     "publish:local": "yarn publish --access public",
     "super-minor": "yarn version --patch",
     "minor": "yarn version --minor",
-    "major": "yarn version --major",
-    "build": "rimraf dist && rollup -c --bundleConfigAsCjs"
+    "major": "yarn version --major"
   },
-  "homepage": "https://hourcoding-ui.netlify.app/",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "author": "Amit Raikwar",
-  "license": "MIT",
   "dependencies": {
     "@types/node": "^20.12.2",
     "@types/react": "^18.2.73",
@@ -43,6 +41,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@chromatic-com/storybook": "^1.2.25",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -68,8 +69,9 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
     "@types/react-test-renderer": "^18.0.7",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
     "autoprefixer": "^10.4.19",
+    "babel-jest": "^29.7.0",
     "chromatic": "^11.3.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -83,10 +85,12 @@
     "eslint-plugin-storybook": "^0.8.0",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-transform-stub": "^2.0.0",
     "postcss": "^8.4.38",
     "prettier": "3.2.5",
     "react-scripts": "5.0.1",
-    "react-test-renderer": "^18.2.0",
+    "react-test-renderer": "^18.3.1",
     "rollup": "^4.18.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -115,5 +119,9 @@
     "hourcoding",
     "hourcoding-react",
     "hour-coding"
-  ]
+  ],
+  "homepage": "https://hourcoding-ui.netlify.app/",
+  "repository": "git@github.com:onemanfighter/ARMacPortfolio.git",
+  "author": "Amit Raikwar",
+  "license": "MIT"
 }

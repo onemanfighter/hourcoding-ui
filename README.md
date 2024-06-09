@@ -1,5 +1,7 @@
 # Hourcoding UI
 
+[![Code-coverage](https://codecov.io/github/onemanfighter/hourcoding-ui/graph/badge.svg?token=VE9SQ4E4SI)](https://codecov.io/github/onemanfighter/hourcoding-ui)
+
 [![Hourcoding UI Lint-Test](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/main.yaml/badge.svg)](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/main.yaml)
 [![Hourcoding UI Publish job](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/publish-npm.yaml/badge.svg)](https://github.com/onemanfighter/hourcoding-ui/actions/workflows/publish-npm.yaml)
 
@@ -56,5 +58,5 @@ export default App;
 ## Author and Maintainer
 
 - [Amit Raikwar - onemanfighter](https://github.com/onemanfighter)
-- [Amit Raikwra - Github](https://github.com/raikwaramit)
+- [Amit Raikwar - Github](https://github.com/raikwaramit)
 - [Amit Raikwar LinkedIn](https://in.linkedin.com/in/amitrai1603)

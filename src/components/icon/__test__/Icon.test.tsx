@@ -13,7 +13,7 @@ describe('Icon component', () => {
     it('icon component with generic category home with default props', () => {
       render(<Icon category="generic" icon={genericIcon} />);
 
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -26,7 +26,7 @@ describe('Icon component', () => {
     it('Home icon with outline variant', () => {
       render(<Icon category="generic" icon={genericIcon} variant="outlined" />);
 
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -38,7 +38,7 @@ describe('Icon component', () => {
 
     it('Home icon with filled variant', () => {
       render(<Icon category="generic" icon={genericIcon} variant="filled" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -50,7 +50,7 @@ describe('Icon component', () => {
 
     it('Home icon with small size', () => {
       render(<Icon category="generic" icon={genericIcon} size="small" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -62,7 +62,7 @@ describe('Icon component', () => {
 
     it('Home icon with medium size', () => {
       render(<Icon category="generic" icon={genericIcon} size="medium" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -74,7 +74,7 @@ describe('Icon component', () => {
 
     it('Home icon with large size', () => {
       render(<Icon category="generic" icon={genericIcon} size="large" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -86,7 +86,7 @@ describe('Icon component', () => {
 
     it('Home icon with primary color', () => {
       render(<Icon category="generic" icon={genericIcon} color="primary" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -98,7 +98,7 @@ describe('Icon component', () => {
 
     it('Home icon with secondary color', () => {
       render(<Icon category="generic" icon={genericIcon} color="secondary" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -110,7 +110,7 @@ describe('Icon component', () => {
 
     it('Home icon with tertiary color', () => {
       render(<Icon category="generic" icon={genericIcon} color="tertiary" />);
-      const icon = screen.getByTestId('icon-generic-home');
+      const icon = screen.getByLabelText('icon-generic-home');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -124,7 +124,7 @@ describe('Icon component', () => {
   describe('Common Category', () => {
     it('Add icon with default props', () => {
       render(<Icon category="common" icon={commonIcon} />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -134,7 +134,7 @@ describe('Icon component', () => {
 
     it('Add icon with small size', () => {
       render(<Icon category="common" icon={commonIcon} size="small" />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -146,7 +146,7 @@ describe('Icon component', () => {
 
     it('Add icon with medium size', () => {
       render(<Icon category="common" icon={commonIcon} size="medium" />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -158,7 +158,7 @@ describe('Icon component', () => {
 
     it('Add icon with large size', () => {
       render(<Icon category="common" icon={commonIcon} size="large" />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -170,7 +170,7 @@ describe('Icon component', () => {
 
     it('Add icon with primary color', () => {
       render(<Icon category="common" icon={commonIcon} color="primary" />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -182,7 +182,7 @@ describe('Icon component', () => {
 
     it('Add icon with secondary color', () => {
       render(<Icon category="common" icon={commonIcon} color="secondary" />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
@@ -194,7 +194,7 @@ describe('Icon component', () => {
 
     it('Add icon with tertiary color', () => {
       render(<Icon category="common" icon={commonIcon} color="tertiary" />);
-      const icon = screen.getByTestId('icon-common-add');
+      const icon = screen.getByLabelText('icon-common-add');
       expect(icon).toBeDefined();
 
       // Snapshot testing
