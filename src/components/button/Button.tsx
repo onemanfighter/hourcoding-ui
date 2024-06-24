@@ -48,7 +48,7 @@ const Button = ({
         isDisabled
           ? {}
           : {
-              scale: 1.2,
+              scale: 1.1,
               backgroundColor: getColor('neutral.600'),
               transition: {
                 duration: 0.3,
